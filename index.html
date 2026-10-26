@@ -188,21 +188,16 @@ footer { border-top: 1px solid var(--line); padding: 25px 24px; color: var(--mut
     <p>Welcome to my On-the-Job Training e-portfolio. This website documents my learning journey, technical skills, projects, and professional growth as an IT student.</p>
     <div class="actions"><a class="btn btn-primary" href="#projects">Explore my projects <span aria-hidden="true">↘</span></a><button class="btn btn-secondary" type="button" onclick="window.print()">Print / Save as PDF ↗</button></div>
   </div>
-  
 
-<div class="profile-card">
-  <img
-    src="images/profile.jpg"
-    alt="Lawrence J. Roca"
-    class="profile-picture"
-  />
-
-  <h2>Lawrence J. Roca</h2>
-  <p>IT Student</p>
-</div>
-
-</aside>
+  <div class="profile-card">
+    <div class="avatar">
+      <img src="images/profile.jpg" alt="Lawrence J. Roca">
+    </div>
+    <h2>Lawrence J. Roca</h2>
+    <p class="role">IT Student</p>
+  </div>
 </section>
+
 <section class="section" id="about">
   <div class="section-head"><div><div class="kicker">01 / About me</div><h2 class="section-title">A little about who I am</h2></div></div>
   <div class="grid-2">
@@ -212,14 +207,42 @@ This e-portfolio serves as a collection of my experiences, outputs, and supporti
     <article class="panel"><div class="icon-box">◎</div><h3>Career Objective</h3><p>To apply the knowledge and skills I have gained in IT / Computer Studies in a professional workplace, learn from experienced colleagues, and contribute responsibly to assigned tasks while developing my technical and communication skills.</p></article>
   </div>
 </section>
+
 <section class="section" id="projects">
   <div class="section-head"><div><div class="kicker">02 / Selected work</div><h2 class="section-title">Projects &amp; accomplishments</h2><p class="section-intro">Showcase class projects or approved OJT outputs. Include a short explanation of your role and what you learned.</p></div></div>
   <div class="grid-3">
-    <article class="panel project-card"><div class="project-icon">▧</div><h3>Cybersecurity Capture-the-Flag (CTF) Challenges</h3><p>Created beginner-friendly cybersecurity challenges involving cryptography, web security, digital forensics, OSINT, and reverse engineering to support hands-on cybersecurity learning.</p><div class="tag-list"><span class="tag">[Technology]</span><span class="tag">[Date]</span></div></article>
-    <article class="panel project-card"><div class="project-icon">⌘</div><h3>Technical Documentation and Learning</h3><p>Documented project instructions, organized supporting files, and practiced explaining technical concepts and troubleshooting steps as part of my IT learning activities.</p><div class="tag-list"><span class="tag">[Technology]</span><span class="tag">[Date]</span></div></article>
-    <article class="panel project-card"><div class="project-icon">◇</div><h3>Personal Portfolio Website</h3><p>Developed a personal website to showcase my introduction, IT projects, accomplishments, and supporting documents using HTML and CSS. Published the portfolio through GitHub Pages, if applicable.</p><div class="tag-list"><span class="tag">[Skill]</span><span class="tag">[Date]</span></div></article>
+    <article class="panel project-card">
+      <div class="project-icon">⌘</div>
+      <h3>Cybersecurity CTF Challenges</h3>
+      <p>Created beginner-level cybersecurity challenges covering cryptography, web security, digital forensics, and OSINT.</p>
+      <div class="tag-list">
+        <span class="tag">Cybersecurity</span>
+        <span class="tag">Cryptography</span>
+      </div>
+    </article>
+
+    <article class="panel project-card">
+      <div class="project-icon">▧</div>
+      <h3>Personal Portfolio Website</h3>
+      <p>Developed a personal website to showcase my background, IT projects, accomplishments, and supporting documents using HTML and CSS. Published via GitHub Pages.</p>
+      <div class="tag-list">
+        <span class="tag">HTML &amp; CSS</span>
+        <span class="tag">GitHub</span>
+      </div>
+    </article>
+
+    <article class="panel project-card">
+      <div class="project-icon">◇</div>
+      <h3>Technical Documentation &amp; Learning</h3>
+      <p>Documented project instructions, organized supporting files, and practiced explaining technical concepts and troubleshooting steps as part of my IT learning activities.</p>
+      <div class="tag-list">
+        <span class="tag">Documentation</span>
+        <span class="tag">Problem-solving</span>
+      </div>
+    </article>
   </div>
 </section>
+
 <section class="section" id="documents">
   <div class="section-head"><div><div class="kicker">03 / Portfolio materials</div><h2 class="section-title">Supporting Evidence of Achievements</h2><p class="section-intro">A collection of documents and materials that demonstrate my qualifications, accomplishments, and completed work. Add files or links when you have them ready.</p></div></div>
   <div class="grid-2">
@@ -235,6 +258,7 @@ This e-portfolio serves as a collection of my experiences, outputs, and supporti
     </div>
   </div>
 </section>
+
 <section class="section" id="contact">
   <div class="section-head"><div><div class="kicker">04 / Contact</div><h2 class="section-title">Let’s connect</h2><p class="section-intro">Add professional contact details here if your school permits you to publish them.</p></div></div>
   <div class="contact-layout">
@@ -243,7 +267,7 @@ This e-portfolio serves as a collection of my experiences, outputs, and supporti
   </div>
 </section>
 </main>
-<footer><div class="footer-inner"><span>© <span id="year"></span> [Your Name] · OJT E-Portfolio</span><span>Built to document learning, progress, and professional growth.</span></div></footer>
+<footer><div class="footer-inner"><span>© <span id="year"></span> Lawrence J. Roca · OJT E-Portfolio</span><span>Built to document learning, progress, and professional growth.</span></div></footer>
 <div class="edit-tip" id="editTip"><span>Personalize every [placeholder] before submitting.</span><button type="button" id="tipClose" aria-label="Dismiss tip">✕</button></div>
 </div>
 <script>
