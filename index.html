@@ -387,7 +387,9 @@ contactForm.addEventListener('submit', async event => {
     contactForm.reset();
     formStatus.textContent = 'Message sent. Thank you, ' + name + '!';
   } catch (error) {
-    formStatus.textContent = 'Could not send your message. Please email lawrenceroca842@gmail.com directly.';
+    formStatus.textContent = /activat/i.test(error.message)
+      ? 'The contact form is not activated yet. Please email lawrenceroca842@gmail.com directly.'
+      : 'Could not send your message. Please email lawrenceroca842@gmail.com directly.';
   } finally {
     submitButton.disabled = false;
   }
