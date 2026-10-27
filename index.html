@@ -289,7 +289,7 @@ This e-portfolio serves as a collection of my experiences, outputs, and supporti
         <label for="visitorEmail">Your email<input id="visitorEmail" name="visitorEmail" type="email" placeholder="you@example.com" autocomplete="email" required></label>
         <label for="visitorMessage">Message<textarea id="visitorMessage" name="visitorMessage" placeholder="Write a message..." required></textarea></label>
         <button class="btn btn-primary" type="submit">Prepare email draft ↗</button>
-        <p class="form-note">This demo prepares an email in your email app; it does not send or store messages.</p>
+        <p class="form-note" id="formStatus" role="status" aria-live="polite">This demo prepares an email in your email app; it does not send or store messages.</p>
       </form>
     </div>
   </div>
@@ -346,7 +346,6 @@ document.addEventListener('keydown', e => {
 
 /* ---------- Misc ---------- */
 document.getElementById('year').textContent = new Date().getFullYear();
-document.getElementById('tipClose').addEventListener('click', () => { document.getElementById('editTip').hidden = true; });
 
 const sections = [...document.querySelectorAll('main section[id]')];
 const navAnchors = [...navLinks.querySelectorAll('a')];
@@ -361,13 +360,16 @@ if ('IntersectionObserver' in window) {
   sections.forEach(section => observer.observe(section));
 }
 
-document.getElementById('contactForm').addEventListener('submit', event => {
+const contactForm = document.getElementById('contactForm');
+const formStatus = document.getElementById('formStatus');
+contactForm.addEventListener('submit', event => {
   event.preventDefault();
   const name = document.getElementById('visitorName').value.trim();
   const email = document.getElementById('visitorEmail').value.trim();
   const message = document.getElementById('visitorMessage').value.trim();
   const subject = encodeURIComponent('Portfolio inquiry from ' + name);
   const body = encodeURIComponent(message + '\n\nFrom: ' + name + '\nReply to: ' + email);
+  formStatus.textContent = 'Opening your email app with the message ready to send...';
   window.location.href = 'mailto:lawrenceroca842@gmail.com?subject=' + subject + '&body=' + body;
 });
 </script>
